@@ -48,7 +48,8 @@ namespace Sharp_Mail_Order___SALES_BONUS
                 SalesBonus = PercentOfHoursWorked * TotalBonusAmount;
 
                 SalesBonusTextBox.Text = SalesBonus.ToString();
-            
+            }
+
             else
             {
                 MessageBox.Show("Hours Worked is not a valid number please chose a number between 0 and 160.");
