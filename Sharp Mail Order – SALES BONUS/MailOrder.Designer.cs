@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalesBonusForm));
             this.EmployeeNameTextBox = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.EmployeeIdTextBox = new System.Windows.Forms.TextBox();
             this.HoursWorkedTextBox = new System.Windows.Forms.TextBox();
             this.TotalSalesTextBox = new System.Windows.Forms.TextBox();
             this.SalesBonusTextBox = new System.Windows.Forms.TextBox();
@@ -41,8 +41,8 @@
             this.EmployeeIdLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LanguageBox = new System.Windows.Forms.GroupBox();
-            this.EnglishRadioButton = new System.Windows.Forms.RadioButton();
             this.FrenchRadioButton = new System.Windows.Forms.RadioButton();
+            this.EnglishRadioButton = new System.Windows.Forms.RadioButton();
             this.CalculateButton = new System.Windows.Forms.Button();
             this.PrintButton = new System.Windows.Forms.Button();
             this.NextButton = new System.Windows.Forms.Button();
@@ -58,13 +58,13 @@
             this.EmployeeNameTextBox.Size = new System.Drawing.Size(138, 26);
             this.EmployeeNameTextBox.TabIndex = 0;
             // 
-            // textBox2
+            // EmployeeIdTextBox
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(158, 152);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 26);
-            this.textBox2.TabIndex = 1;
+            this.EmployeeIdTextBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeIdTextBox.Location = new System.Drawing.Point(158, 152);
+            this.EmployeeIdTextBox.Name = "EmployeeIdTextBox";
+            this.EmployeeIdTextBox.Size = new System.Drawing.Size(100, 26);
+            this.EmployeeIdTextBox.TabIndex = 1;
             // 
             // HoursWorkedTextBox
             // 
@@ -164,6 +164,16 @@
             this.LanguageBox.TabStop = false;
             this.LanguageBox.Text = "Languages";
             // 
+            // FrenchRadioButton
+            // 
+            this.FrenchRadioButton.AutoSize = true;
+            this.FrenchRadioButton.Location = new System.Drawing.Point(7, 44);
+            this.FrenchRadioButton.Name = "FrenchRadioButton";
+            this.FrenchRadioButton.Size = new System.Drawing.Size(65, 17);
+            this.FrenchRadioButton.TabIndex = 1;
+            this.FrenchRadioButton.Text = "Français";
+            this.FrenchRadioButton.UseVisualStyleBackColor = true;
+            // 
             // EnglishRadioButton
             // 
             this.EnglishRadioButton.AutoSize = true;
@@ -175,16 +185,6 @@
             this.EnglishRadioButton.TabStop = true;
             this.EnglishRadioButton.Text = "English";
             this.EnglishRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // FrenchRadioButton
-            // 
-            this.FrenchRadioButton.AutoSize = true;
-            this.FrenchRadioButton.Location = new System.Drawing.Point(7, 44);
-            this.FrenchRadioButton.Name = "FrenchRadioButton";
-            this.FrenchRadioButton.Size = new System.Drawing.Size(65, 17);
-            this.FrenchRadioButton.TabIndex = 1;
-            this.FrenchRadioButton.Text = "Français";
-            this.FrenchRadioButton.UseVisualStyleBackColor = true;
             // 
             // CalculateButton
             // 
@@ -206,6 +206,7 @@
             this.PrintButton.TabIndex = 13;
             this.PrintButton.Text = "Print";
             this.PrintButton.UseVisualStyleBackColor = true;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // NextButton
             // 
@@ -216,6 +217,7 @@
             this.NextButton.TabIndex = 14;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // SalesBonusForm
             // 
@@ -235,7 +237,7 @@
             this.Controls.Add(this.SalesBonusTextBox);
             this.Controls.Add(this.TotalSalesTextBox);
             this.Controls.Add(this.HoursWorkedTextBox);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.EmployeeIdTextBox);
             this.Controls.Add(this.EmployeeNameTextBox);
             this.Name = "SalesBonusForm";
             this.Text = "Sales Bonus Calculator";
@@ -250,7 +252,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox EmployeeNameTextBox;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox EmployeeIdTextBox;
         private System.Windows.Forms.TextBox HoursWorkedTextBox;
         private System.Windows.Forms.TextBox TotalSalesTextBox;
         private System.Windows.Forms.TextBox SalesBonusTextBox;
