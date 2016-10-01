@@ -48,7 +48,7 @@ namespace Sharp_Mail_Order___SALES_BONUS
                 SalesBonus = PercentOfHoursWorked * TotalBonusAmount;
 
                 SalesBonusTextBox.Text = SalesBonus.ToString();
-            }
+            
             else
             {
                 MessageBox.Show("Hours Worked is not a valid number please chose a number between 0 and 160.");
@@ -67,6 +67,24 @@ namespace Sharp_Mail_Order___SALES_BONUS
         private void PrintButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("The Sales Bonus for this Employee was printed.");
+        }
+
+        private void FrenchRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            EmployeeIdLabel.Text = "Employé ID";
+            EmployeeNameLabel.Text = "Nom de l'employé";
+            SalesBonusLabel.Text = "Bonus de vente";
+            HoursWorkedLabel.Text = "Heures travaillées";
+            TotalSalesLabel.Text = "Ventes totales";
+        }
+
+        private void EnglishRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            EmployeeIdLabel.Text = "Employee ID";
+            EmployeeNameLabel.Text = "Employee Name";
+            SalesBonusLabel.Text = "Sales Bonus";
+            HoursWorkedLabel.Text = "Hours Worked";
+            TotalSalesLabel.Text = "Total Sales";
         }
     }
     }

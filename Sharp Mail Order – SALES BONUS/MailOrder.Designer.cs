@@ -173,6 +173,7 @@
             this.FrenchRadioButton.TabIndex = 1;
             this.FrenchRadioButton.Text = "Français";
             this.FrenchRadioButton.UseVisualStyleBackColor = true;
+            this.FrenchRadioButton.CheckedChanged += new System.EventHandler(this.FrenchRadioButton_CheckedChanged);
             // 
             // EnglishRadioButton
             // 
@@ -185,6 +186,7 @@
             this.EnglishRadioButton.TabStop = true;
             this.EnglishRadioButton.Text = "English";
             this.EnglishRadioButton.UseVisualStyleBackColor = true;
+            this.EnglishRadioButton.CheckedChanged += new System.EventHandler(this.EnglishRadioButton_CheckedChanged);
             // 
             // CalculateButton
             // 
